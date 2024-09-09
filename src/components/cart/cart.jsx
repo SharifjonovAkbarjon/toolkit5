@@ -1,15 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "../../redux/cart";
-import { MdEdit } from "react-icons/md";
-import BasicModal from "../modal/Modal";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.value);
 
   const cartList = cart.map((el) => (
-<div className="bg-white container mx-auto shadow-md rounded-[10px] py-8 px-8 relative " key={el.id}>
+<div className="bg-white container mx-auto shadow-md rounded-[10px] py-8 px-8 relative items-center justify-center  text-center" key={el.id}>
  
   <div className="w-full h-[200px] rounded-t-xl ">
     <img
@@ -25,12 +23,6 @@ const Cart = () => {
     <p className="text-lg font-[500]">{el.lname}</p>
     <p className="text-md ">{el.phone}</p>
   </div>
-
-
-  <div className="absolute top-4 right-4">
-    <BasicModal ooo={<MdEdit className="text-gray-500 hover:text-gray-700" />} />
-  </div>
-
 
   <button
     onClick={() => dispatch(remove({ id: el.id }))}

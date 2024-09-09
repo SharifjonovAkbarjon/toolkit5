@@ -60,13 +60,12 @@ export default function BasicModal({ ooo }) {
                 Username
               </label>
               <input
-                required
                 value={data.title}
                 onChange={handleChange}
                 name="username"
                 className="border rounded-lg outline-none py-1 px-2"
                 type="text"
-                placeholder="username"
+                placeholder="Username"
               />
             </div>
             <div className="flex flex-col gap-1">
@@ -74,13 +73,12 @@ export default function BasicModal({ ooo }) {
                 Name
               </label>
               <input
-                required
                 value={data.lname}
                 onChange={handleChange}
                 name="lname"
                 className="border rounded-lg outline-none py-1 px-2"
                 type="text"
-                placeholder="name"
+                placeholder="Name"
               />
             </div>
             <div className="flex flex-col gap-1">
@@ -88,13 +86,13 @@ export default function BasicModal({ ooo }) {
                 Phone number
               </label>
               <input
-                required
+                
                 value={data.phone}
                 onChange={handleChange}
                 name="phone"
                 className="border outline-none  py-1 px-2 rounded-lg"
-                type="number"
-                placeholder="phone"
+                type="text"
+                placeholder="Phone number"
               />
             </div>
             <button className="rounded-lg py-1 bg-[yellowgreen] text-[#fff]">Create card</button>

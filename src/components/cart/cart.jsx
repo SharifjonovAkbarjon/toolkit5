@@ -9,9 +9,9 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart.value);
 
   const cartList = cart.map((el) => (
-<div className="bg-white shadow-lg rounded-xl p-6 relative max-w-sm" key={el.id}>
+<div className="bg-white container mx-auto shadow-md rounded-[10px] py-8 px-8 relative " key={el.id}>
  
-  <div className="w-full h-48 bg-gray-200 rounded-t-xl overflow-hidden">
+  <div className="w-full h-[200px] rounded-t-xl ">
     <img
       src="https://yt3.googleusercontent.com/ytc/AIdro_ksPhIMI0WR5XVXpuRZwzFaPQ5DQhfTX2sCE4e8EhhY2mk=s900-c-k-c0x00ffffff-no-rj"
       alt="User profile"
